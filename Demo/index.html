@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>Picker Demo</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            background: lightblue;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+
+        .innerBox {
+            width: 150px;
+            height: 100px;
+            background: lightcoral;
+        }
+
+        .excludeElmName {
+            background: lightgreen;
+            display: inline-block;
+        }
+
+        .control {
+            margin-bottom: 20px;
+        }
+
+        .method {
+            border: 1px dotted #333;
+            display: inline-block;
+            padding: 10px;
+        }
+
+        .tips {
+            padding: 5px 10px;
+            background: lightblue;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tips">
+        open F12 see more info in Console
+    </div>
+    <div class="control">
+        <div class="method">
+            <h4>Switch</h4>
+            <button id="m_on">On</button>
+            <button id="m_off">Off</button>
+        </div>
+        <div class="method">
+            <h4>Change Mode</h4>
+            <button id="m_cover">Cover</button>
+            <button id="m_target">Target</button>
+        </div>
+    </div>
+    <div class="box" id="elm1">
+        <h3>target box</h3>
+        <div class="innerBox">
+            <h3>Custom event</h3>
+            contextmenu me
+        </div>
+        <div class="innerBox">
+            <h3>innerBox</h3>
+            <span class="excludeElmName">exclude 'SPAN'</span>
+        </div>
+    </div>
+
+    <div class="box" id="elm2">
+        <h3>other box</h3>
+        <div class="innerBox">
+            <h3>innerBox</h3>
+        </div>
+    </div>
+    <link rel="stylesheet" href="../dist/picker.min.css">
+    <script src="../dist/picker.min.js"></script>
+
+    <script>
+
+        // const p = new Picker();
+        const p = new Picker({
+            elm: document.getElementById('elm1'),
+            mode: 'cover',
+            excludeElmName: ['span'],
+            events: [{
+                key: 'contextmenu',
+                fn(event) {
+                    console.log('Diy contextmenu Event', event.target, event);
+                    event.preventDefault();
+                },
+            }],
+            onInit() {
+                console.log('init finish');
+            },
+            onClick(event) {
+                console.log('Click Event', event.target, event);
+            },
+            onHover(event) {
+                console.log('Hover Event', event.target, event);
+            },
+        });
+        document.getElementById('m_on').addEventListener('click', () => {
+            p.on();
+        })
+        document.getElementById('m_off').addEventListener('click', () => {
+            p.off();
+        })
+        document.getElementById('m_cover').addEventListener('click', () => {
+            p.changeMode('cover');
+        })
+        document.getElementById('m_target').addEventListener('click', () => {
+            p.changeMode('target');
+        })
+    </script>
+</body>
+
+</html>
