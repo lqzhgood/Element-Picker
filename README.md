@@ -6,7 +6,7 @@ English
 中文
 
 # Demo
-http://lqzhgood.github.io/Element-Picker/demo/index.html
+http://lqzhgood.github.io/Element-Picker/demo.html
 
 
 
@@ -29,7 +29,7 @@ http://lqzhgood.github.io/Element-Picker/demo/index.html
 | mode  |  style mode  | string | 'target' 'cover' | 'target' |
 | excludeElmName  |  exclude element tag name **Lowercase**  | string[] | - | [] |
 | switch  |  Initial state switch  | boolean | true false | true |
-| events  |  Custom events | {key:'EVENT_NAME',fn:function(event){}}[] | -   | [] | 
+| events  |  Custom events | {key:'EVENT_NAME',fn:function(event){}}[] | -   | [] |
 
 ### Event
 | Event Name  | Description  | Type |  Default |
