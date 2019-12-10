@@ -15,7 +15,7 @@ http://lqzhgood.github.io/Element-Picker/demo.html
 <link rel="stylesheet" href="../dist/picker.min.css">
 <script src="../dist/picker.min.js"></script>
 <script>
-	const p = new new Picker();
+	const p = new Picker();
 </script>
 ```
 
