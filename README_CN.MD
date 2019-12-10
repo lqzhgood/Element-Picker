@@ -2,12 +2,12 @@
 More user - friendly autonomous element selector
 
 # DOC
-English
-中文
+[English](https://github.com/lqzhgood/Element-Picker)
+[中文](https://github.com/lqzhgood/Element-Picker/blob/master/README_CN.MD)
 
 # Demo
 http://lqzhgood.github.io/Element-Picker/demo.html
-
+![screenshots](https://lqzh.me/Element-Picker/screenshots.gif)
 
 
 # How to Use
