@@ -23,24 +23,24 @@ http://lqzhgood.github.io/Element-Picker/demo/index.html
 
 ## Config
 ### Attribute
-| Attribute  | Description  | Type | Accepted Values	 | Default
-| ------------ | ------------ |
-| elm  |  wrap elment | Element | -  | document.querySelector('body')
-| mode  |  style mode  | string | 'target' 'cover' | 'target'
-| excludeElmName  |  exclude element tag name **Lowercase**  | string[] | - | []
-| switch  |  Initial state switch  | boolean | true false | true
-| events  |  Custom events | {key:'EVENT_NAME',fn:function(event){}}[] | -   | []
+| Attribute  | Description  | Type | Accepted Values	 | Default |
+| ------------ | ------------ | ------------ | ------------ | ------------ |
+| elm  |  wrap elment | Element | -  | document.querySelector('body') |
+| mode  |  style mode  | string | 'target' 'cover' | 'target' |
+| excludeElmName  |  exclude element tag name **Lowercase**  | string[] | - | [] |
+| switch  |  Initial state switch  | boolean | true false | true |
+| events  |  Custom events | {key:'EVENT_NAME',fn:function(event){}}[] | -   | [] | 
 
 ### Event
 | Event Name  | Description  | Type |  Default |
-| ------------ | ------------ |
+| ------------ | ------------ | ------------ | ------------ |
 | onInit  |  Initialization finish event | Function |  -
 | onClick  |  Click pick element event (bind this =>  instance )| Function   | -
 | onHover  |  hover pick element event (bind this => instance ) | Function    | -
 
 ### Method
 | Method Name  | Description  | Parameters |
-| ------------ | ------------ |
+| ------------ | ------------ | ------------ |
 | on  |  on | - |
 | off  |  off | - |
 | changeMode  | change style mode | mode |
